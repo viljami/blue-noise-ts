@@ -1,6 +1,6 @@
 {
-  "name": "blue-noise",
-  "version": "1.0.0",
+  "name": "blue-noise-ts",
+  "version": "1.0.1",
   "description": "Blue noise and Poisson disc sampling for even distribution in procedural generation",
   "license": "MIT",
   "author": "Viljami Peltola",
@@ -8,9 +8,9 @@
     "type": "git",
     "url": "https://github.com/viljami/blue-noise-ts"
   },
-  "homepage": "https://github.com/blue-noise-ts/repo#readme",
+  "homepage": "https://github.com/viljami/blue-noise-ts#readme",
   "bugs": {
-    "url": "https://github.com/blue-noise-ts/repo/issues"
+    "url": "https://github.com/viljami/blue-noise-ts/issues"
   },
   "type": "module",
   "main": "dist/index.js",
