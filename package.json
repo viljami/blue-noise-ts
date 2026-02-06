@@ -1,0 +1,65 @@
+{
+  "name": "blue-noise",
+  "version": "1.0.0",
+  "description": "Blue noise and Poisson disc sampling for even distribution in procedural generation",
+  "license": "MIT",
+  "author": "Viljami Peltola",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": "",
+  "bugs": {
+    "url": ""
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build && npm test",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "blue-noise",
+    "poisson-disc",
+    "sampling",
+    "procedural",
+    "distribution",
+    "scatter",
+    "poisson-disk",
+    "bridson",
+    "procedural-generation",
+    "game-development",
+    "noise-generator",
+    "object-placement",
+    "dithering",
+    "spatial-distribution"
+  ],
+  "devDependencies": {
+    "@vitest/ui": "^1.0.0",
+    "@vitest/coverage-v8": "^1.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

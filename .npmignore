@@ -1,0 +1,34 @@
+# Test files
+src/__tests__/
+*.test.ts
+*.spec.ts
+
+# Test configuration
+vitest.config.ts
+coverage/
+.vitest/
+
+# Development files
+.gitignore
+tsconfig.json
+.vscode/
+.idea/
+
+# Build artifacts (we'll publish dist instead)
+node_modules/
+
+# Documentation that's not needed in package
+TESTING.md
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Lock files (let users manage their own)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
