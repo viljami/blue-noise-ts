@@ -6,11 +6,11 @@
   "author": "Viljami Peltola",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/viljami/blue-noise-ts"
   },
-  "homepage": "",
+  "homepage": "https://github.com/blue-noise-ts/repo#readme",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/blue-noise-ts/repo/issues"
   },
   "type": "module",
   "main": "dist/index.js",
