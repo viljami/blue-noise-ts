@@ -43,7 +43,7 @@ Generates evenly distributed points using Bridson's algorithm.
 **Example:**
 
 ```typescript
-import { poissonDiscSampling } from "./index";
+import { poissonDiscSampling } from "blue-noise-ts";
 
 // Place trees in a 1000x1000 area with minimum 30 units apart
 const treePositions = poissonDiscSampling(1000, 1000, 30);
@@ -72,7 +72,7 @@ Generates a high-quality blue noise texture using the void-and-cluster method.
 **Example:**
 
 ```typescript
-import { generateBlueNoise } from "./index";
+import { generateBlueNoise } from "blue-noise-ts";
 
 // Generate a 256x256 blue noise texture
 const noise = generateBlueNoise(256, 256);
@@ -100,7 +100,7 @@ Fast approximation of blue noise using Poisson disc sampling.
 **Example:**
 
 ```typescript
-import { fastBlueNoise } from "./index";
+import { fastBlueNoise } from "blue-noise-ts";
 
 // Quick blue noise for real-time use
 const noise = fastBlueNoise(512, 512, 0.5);
@@ -138,7 +138,7 @@ Generates a tileable/wrapping blue noise pattern.
 ### Tree Placement in a Forest
 
 ```typescript
-import { poissonDiscSampling } from "./index";
+import { poissonDiscSampling } from "blue-noise-ts";
 
 function generateForest(mapWidth: number, mapHeight: number) {
   // Dense forest: trees every 15-20 units
@@ -154,7 +154,7 @@ function generateForest(mapWidth: number, mapHeight: number) {
 ### Rock Scatter with Varying Density
 
 ```typescript
-import { poissonDiscSampling } from "./index";
+import { poissonDiscSampling } from "blue-noise-ts";
 import { createNoise2D } from "simplex-noise";
 
 function generateRocks(mapWidth: number, mapHeight: number) {
@@ -177,7 +177,7 @@ function generateRocks(mapWidth: number, mapHeight: number) {
 ### Particle System Spawn
 
 ```typescript
-import { poissonDiscSampling } from "./index";
+import { poissonDiscSampling } from "blue-noise-ts";
 
 function createFireworkExplosion(centerX: number, centerY: number) {
   const radius = 100;
@@ -196,7 +196,7 @@ function createFireworkExplosion(centerX: number, centerY: number) {
         centerX + dx,
         centerY + dy,
         dx / distance, // velocity x
-        dy / distance // velocity y
+        dy / distance, // velocity y
       );
     }
   });
@@ -206,7 +206,7 @@ function createFireworkExplosion(centerX: number, centerY: number) {
 ### Dithering with Blue Noise
 
 ```typescript
-import { fastBlueNoise } from "./index";
+import { fastBlueNoise } from "blue-noise-ts";
 
 // Generate once at startup
 const ditherTexture = fastBlueNoise(64, 64);
@@ -239,7 +239,7 @@ function ditherImage(imageData: ImageData) {
 ### Tileable Texture for Looping Levels
 
 ```typescript
-import { tileableBlueNoise } from "./index";
+import { tileableBlueNoise } from "blue-noise-ts";
 
 // Generate tileable pattern for infinite scrolling
 const pattern = tileableBlueNoise(512, 30);
@@ -258,7 +258,7 @@ function getObjectPosition(worldX: number, worldY: number) {
 ### Star Field Generation
 
 ```typescript
-import { poissonDiscSampling } from "./index";
+import { poissonDiscSampling } from "blue-noise-ts";
 
 function generateStarField(width: number, height: number) {
   // Different layers for parallax
@@ -276,7 +276,7 @@ function generateStarField(width: number, height: number) {
 ### Biome-Based Object Placement
 
 ```typescript
-import { poissonDiscSampling } from "./index";
+import { poissonDiscSampling } from "blue-noise-ts";
 import { createNoise2D } from "simplex-noise";
 
 interface BiomeConfig {
@@ -295,7 +295,7 @@ function placeObjectsInBiome(
   x: number,
   y: number,
   width: number,
-  height: number
+  height: number,
 ) {
   const config = biomeConfigs[biome];
   const points = poissonDiscSampling(width, height, config.minDistance);
@@ -514,7 +514,6 @@ npm run test:coverage
 The test suite covers:
 
 - **Poisson disc sampling**
-
   - Distance constraints
   - Boundary conditions
   - Deterministic seeding
@@ -522,14 +521,12 @@ The test suite covers:
   - Performance characteristics
 
 - **Blue noise generation**
-
   - Texture generation (void-and-cluster)
   - Fast approximation
   - Value ranges and distribution
   - Deterministic behavior
 
 - **Sampling utilities**
-
   - Threshold-based sampling
   - Jitter application
   - Tileable patterns
@@ -547,7 +544,7 @@ Tests are located in `src/__tests__/`. To add new tests:
 
 ```typescript
 import { describe, it, expect } from "vitest";
-import { poissonDiscSampling } from "../index";
+import { poissonDiscSampling } from ".blue-noise-ts";
 
 describe("My Feature", () => {
   it("should work correctly", () => {
